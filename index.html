@@ -50,9 +50,10 @@
             border-radius: 5px;
             border-bottom-right-radius: 10px;
             border-top-right-radius: 10px;
-            width:350px;
             border:none;
             background-origin: padding-box;
+            transition: 0.2s;
+            width:350px;
         }
         #searchbar:focus{
             transition: 0.2s;
@@ -260,7 +261,7 @@
     </header>
     <main>
         <div id="mainleft">
-            <h1>Welcome to <br>Web-Developers Course </h1>
+            <h1>Welcome <span id="nameindicator"></span>to <br>Web-Developers Course </h1>
             <p>Learn it Your self</p>
         </div>
         <form autocomplete="off">
@@ -310,5 +311,9 @@
             <li><img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" class="footicons"><h3>Whatsapp:4672915</h3></li>
         </ul>
     </footer>
+    <script>
+        var x=prompt("Please Enter Your Name=");
+        document.querySelector("#nameindicator").innerHTML=x+" ";
+    </script>
 </body>
 </html>
